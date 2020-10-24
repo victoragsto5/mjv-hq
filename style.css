@@ -1,0 +1,183 @@
+/*---------------------------------
+Padrões do navegador
+---------------------------------*/
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    line-height: 1.2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+/*---------------------------------
+CSS Grid layout
+---------------------------------*/
+.container-grid {
+    display: grid;
+    grid-template-columns: 250px 2fr 200px;
+    grid-template-rows: auto;
+    grid-template-areas: "c c c"
+                         "pe cp pd";
+}
+
+.container-interno {
+    max-width: 940px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*---------------------------------
+Topo - cabeçalho
+---------------------------------*/
+.cabecalho {
+    height: 3rem;
+    grid-area: c;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10rem;
+    background-color: rgb(151, 184, 212);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.cabecalho ul li{
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+}
+
+.cabecalho ul li a {
+    color: #000000;
+}
+
+.cabecalho ul li a:hover {
+    color: #ffffff;
+}
+
+/*---------------------------------
+Feed de noticias
+---------------------------------*/
+.container-principal {
+    background: #f3f3f3;
+    grid-area: cp;
+    padding: 5rem 0;
+}
+
+.busca {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.busca > input {
+    min-width: 5%;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    height: 3rem;
+}
+
+.busca .caixa-pesquisa {
+    max-width: 60%;
+    width: 100%;
+    margin-right: 1rem;
+    background-color: rgb(192, 181, 202);
+    padding: 0 2rem;
+    color: #ffffff;
+}
+
+.botao-pesquisa {
+    background-color: rgb(160, 141, 177);
+    color: #ffffff;
+    width: 10%;
+    height: 3rem;
+    cursor: pointer;
+}
+
+/*---------------------------------
+Post
+---------------------------------*/
+.imagem-post {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-post > img {
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.texto-post {
+    text-align: left;
+    max-width: 59rem;
+    margin: 0 auto;
+}
+
+.titulo-post {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.descricao-post {
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+/*---------------------------------
+Painel da esquerda
+---------------------------------*/
+.painel-esquerda {
+    min-width: 250px;
+    grid-area: pe;
+    position: fixed;
+    left: 0;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagem-perfil img{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-top: 2rem;
+}
+
+.nome-usuario {
+    margin-top: 2rem;
+}
+
+.id-usuario {
+    color: rgb(124, 124, 124);
+    font-size: 1.1rem;
+}
+
+.quantidade-amigos {
+    margin-top: 1rem;
+}
+
+/*---------------------------------
+Painel da direita
+---------------------------------*/
+.painel-direita {
+    min-width: 200px;
+    width: 100%;
+    grid-area: pd;
+    margin-top: 3rem;
+}
