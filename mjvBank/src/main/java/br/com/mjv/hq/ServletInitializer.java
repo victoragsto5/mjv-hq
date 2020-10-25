@@ -1,4 +1,4 @@
-package br.com.mjv.bank;
+package br.com.mjv.hq;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

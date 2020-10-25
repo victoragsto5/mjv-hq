@@ -1,4 +1,4 @@
-package br.com.mjv.bank;
+package br.com.mjv.hq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
