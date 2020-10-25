@@ -12,6 +12,7 @@ public class ClienteController {
 	public ModelAndView inicio(@PathVariable Integer id) {
 		ModelAndView mv = new ModelAndView("home");
 //		mv.addObject("cliente", service.buscarPorId(id));
+		//teste 1
 		return mv;
 	}
 }
