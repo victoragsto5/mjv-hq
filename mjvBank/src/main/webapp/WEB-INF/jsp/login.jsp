@@ -21,7 +21,7 @@
 	<body>
 
 	   <div class="container" style="width: 40%">
-	   	<h1 class="text-center" style="padding-top: 40px;">MJV Bank</h1>
+	   	<h1 class="text-center" style="padding-top: 40px;">MJV Hq</h1>
 		
 		<c:if test='${not empty mensagem}'>
 			<div class="alert alert-danger" role="alert">
