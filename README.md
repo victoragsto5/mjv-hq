@@ -12,4 +12,4 @@ Projeto de pseudo rede social com feed que apresenta notícias sobre hq's e quad
 - Bootstrap 4.5.3
 
 # Screenshots
-<img src="https://ibb.co/5BsDhcS" height="400px">
+<a href="https://ibb.co/5BsDhcS"><img src="https://i.ibb.co/xJzvq5B/screen.png" alt="screen" border="0"></a>
