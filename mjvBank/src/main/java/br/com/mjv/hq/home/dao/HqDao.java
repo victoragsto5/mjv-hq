@@ -1,8 +1,8 @@
-package br.com.mjv.bank.dao;
+package br.com.mjv.hq.home.dao;
 
 import java.util.List;
 
-import br.com.mjv.model.Hq;
+import br.com.mjv.hq.home.model.Hq;
 
 public interface HqDao {
 	

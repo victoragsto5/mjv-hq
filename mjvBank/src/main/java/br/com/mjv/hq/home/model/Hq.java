@@ -1,16 +1,16 @@
-package br.com.mjv.model;
+package br.com.mjv.hq.home.model;
 
 public class Hq {
 	
-	private Integer Id;
+	private Integer id;
 	private String nome;
 	private String capa;
 	
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 	public String getNome() {
 		return nome;

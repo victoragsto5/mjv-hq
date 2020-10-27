@@ -1,18 +1,14 @@
-DROP TABLE IF EXISTS TB_CLIENTE;
+DROP TABLE IF EXISTS TB_HQ;
 
--- CLIENTES --
-CREATE TABLE TB_CLIENTE (
-  id INT AUTO_INCREMENT  PRIMARY KEY,
-  nome VARCHAR(250) NOT NULL,
-  usuario VARCHAR(50) NOT NULL,
-  cpf VARCHAR(11) NOT NULL,
-  saldo DECIMAL(10,2) DEFAULT 0.00,
-  agencia INT DEFAULT NOT NULL,
-  conta INT DEFAULT NOT NULL
+-- TABELA HQ --
+CREATE TABLE TB_HQ (
+  ID_HQ INT AUTO_INCREMENT  PRIMARY KEY,
+  NOME_HQ VARCHAR(250) NOT NULL,
+  CAPA_HQ VARCHAR(50) NOT NULL
 );
 
-INSERT INTO TB_CLIENTE (nome, usuario, cpf, saldo, agencia, conta) VALUES
-  ('Sydney Matagal', 'symata', '60696996022', 1000000.00, 1, 123456),
-  ('Daniella de Mercúrio', 'dademer', '60024193062', 1500000.00, 1, 987654),
-  ('Pequeno Carlos Marrom', 'pcm', '23164303092', 2000000.00, 1, 951753);
+INSERT INTO TB_HQ (NOME_HQ, CAPA_HQ) VALUES
+  ('Batman', 'batman_capa.jpg'),
+  ('Superman', 'superman_capa.jpg'),
+  ('The Flash', 'flash_capa.jpg');
  

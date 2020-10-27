@@ -1,19 +1,17 @@
-package br.com.mjv.bank.dao;
+package br.com.mjv.hq.home.dao;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
-import br.com.mjv.model.Cliente;
-import br.com.mjv.model.ClienteRowMapper;
-import br.com.mjv.model.Hq;
-import br.com.mjv.model.HqRowMapper;
+import br.com.mjv.hq.home.model.Hq;
+import br.com.mjv.hq.home.model.HqRowMapper;
 
+@Repository
 public class HqDaoImpl implements HqDao{
-
 	
 	@Autowired
 	private NamedParameterJdbcTemplate template;
@@ -23,9 +21,7 @@ public class HqDaoImpl implements HqDao{
 		try {
 			String sql = " SELECT * FROM TB_HQ ";
 
-			MapSqlParameterSource params = new MapSqlParameterSource();
-			
-			List<Hq> lista = this.template.queryForList(sql, params, Hq.class);
+			List<Hq> lista = this.template.query(sql, new HqRowMapper());
 			
 			return lista;
 		} catch (EmptyResultDataAccessException e) {

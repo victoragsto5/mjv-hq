@@ -1,4 +1,4 @@
-package br.com.mjv.model;
+package br.com.mjv.hq.home.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

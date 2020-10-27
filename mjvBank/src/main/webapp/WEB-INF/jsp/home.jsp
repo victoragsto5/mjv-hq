@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Login</title>
+		<title>Home</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -19,30 +19,22 @@
 	</head>
 
 	<body>
-
-	   <div class="container" style="width: 40%">
-	   	<h1 class="text-center" style="padding-top: 40px;">MJV Hq</h1>
-		
-		<c:if test='${not empty mensagem}'>
-			<div class="alert alert-danger" role="alert">
-			  <c:out value="${mensagem}" />
-			</div>
-		</c:if>
-		
-		
-		<form action="/login" method="post">
-			<div class="form-group">
-		  		<label for="txtUsuario">Usuário</label>
-		    	<input type="text" name="usuario" class="form-control" id="txtUsuario" >
-		  	</div>
-			<div class="form-group">
-			    <label for="txtSenha">Senha</label>
-			    <input type="password" name="senha" class="form-control" id="txtSenha">
-			</div>
-		  	
-		  	<button type="submit" class="btn btn-primary">Autenticar</button>
-		</form>
-	   </div>
-	   
+		<div class="container" style="width: 40%">
+		   	<h1 class="text-center" style="padding-top: 40px;">MJV HQ Home</h1>
+			<c:if test="${not empty list}">
+				<ul>
+					<c:forEach var="itemList" items="${list}">
+						<li>${itemList}</li>
+					</c:forEach>
+				</ul>
+			</c:if>
+			<c:if test="${not empty listHQ}">
+				<ul>
+					<c:forEach var="itemHQ" items="${listHQ}">
+						<li>Nome: ${itemHQ.nome} Capa: ${itemHQ.capa}</li>
+					</c:forEach>
+				</ul>
+			</c:if>
+		</div>
 	</body>
 </html>
