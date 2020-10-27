@@ -29,4 +29,17 @@ public class HomeController {
 		return model;
 
 	}
+	
+	@RequestMapping(value = "/home2", method = RequestMethod.GET)
+	public ModelAndView getdata2() {
+		
+		List<Hq> listHQ = service.listarHQs();
+		
+		//return back to home.jsp
+		ModelAndView model = new ModelAndView("home2");
+		model.addObject("listHQ", listHQ);
+		
+		return model;
+		
+	}
 }
