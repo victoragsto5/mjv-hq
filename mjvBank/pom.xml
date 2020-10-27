@@ -8,11 +8,11 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.mjv.bank</groupId>
-	<artifactId>mjvBank</artifactId>
+	<groupId>br.com.mjv.hq</groupId>
+	<artifactId>mjv-hq</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>mjvBank</name>
+	<name>mjv-hq</name>
 	<description>Projeto utilizado para o cusro MJV</description>
 
 	<properties>
