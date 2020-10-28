@@ -9,7 +9,7 @@ CREATE TABLE TB_HQ (
 );
 
 INSERT INTO TB_HQ (NOME_HQ, CAPA_HQ, DESCRICAO_HQ) VALUES
-  ('Spider-Man Gedddon', 'hq1.jpg', 'Spider-Man no mundo rock'),
+  ('Spider-Man Geddon', 'hq1.jpg', 'Spider-Man no mundo rock'),
   ('Spider-Man Geddon', 'hq2.jpg', 'Spide-Man de volta ao Queens'),
   ('Ultimate Spider-Man', 'hq3.jpg', 'Spider-Man da nova geração');
  
