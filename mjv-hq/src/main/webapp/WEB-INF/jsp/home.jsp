@@ -8,12 +8,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Projeto Mjv</title>
+		<title>Home / Projeto Mjv</title>
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-		<link rel="stylesheet" href="../../../resources/static/css/style.css">
+		<link rel="stylesheet" href="../../css/style.css">
 		
 		<!-- jQuery and JS bundle w/ Popper.js -->
 		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -43,29 +43,10 @@
                     <input type="search" placeholder="O que você procura?" required class="caixa-pesquisa">
                     <input type="submit" value="&#x1F50D" class="botao-pesquisa">
                 </form><!-- Busca -->
-                
-                <!--  Link do Backend -->
-                <div class="backend">
-	                <c:if test="${not empty list}">
-						<ul>
-							<c:forEach var="itemList" items="${list}">
-								<li>${itemList}</li>
-							</c:forEach>
-						</ul>
-					</c:if>
-					
-					<c:if test="${not empty listHQ}">
-						<ul>
-							<c:forEach var="itemHQ" items="${listHQ}">
-								<li>Nome: ${itemHQ.nome} Capa: ${itemHQ.capa}</li>
-							</c:forEach>
-						</ul>
-					</c:if>
-				</div>
 
                 <div class="post">
                     <picture class="imagem-post">
-                        <img src="./h1.jpg" alt="Imagem de post sobre hq do homem-aranha">
+                        <img src="../../img/hq6.jpg" alt="Imagem de post sobre hq do homem-aranha">
                     </picture><!-- Imagem do post -->
 
                     <div class="texto-post">
@@ -88,7 +69,7 @@
             <h1 class="logo">Logo do projeto</h1>
             
             <picture class="imagem-perfil">
-                <img src="./img-perfil.jpg" alt="Imagem de perfil da rede social">
+                <img src="../../img/img-perfil.jpg" alt="Imagem de perfil da rede social">
             </picture>
 
             <h2 class="nome-usuario">
@@ -105,36 +86,19 @@
         </aside><!-- Painel da esquerda -->
 
         <aside class="painel-direita">
-
-            <div class="cards-hq">
-                <picture class="hq-curtida">
-                    <img src="../../../imgs/hq1.jpg" alt="Hq do homem-aranha">
-                </picture>
-
-                <p class="estrelas">
-                    &#9733 &#9733 &#9733 &#9733 &#9734
-                </p>
-            </div><!-- Card HQ -->
-
-            <div class="cards-hq">
-                <picture class="hq-curtida">
-                    <img src="./hq2.jpg" alt="Hq do homem-aranha">
-                </picture>
-
-                <p class="estrelas">
-                    &#9733 &#9733 &#9734 &#9734 &#9734
-                </p>
-            </div><!-- Card HQ -->
-
-            <div class="cards-hq">
-                <picture class="hq-curtida">
-                    <img src="./hq3.jpg" alt="Hq do homem-aranha">
-                </picture>
-
-                <p class="estrelas">
-                    &#9733 &#9733 &#9733 &#9734 &#9734
-                </p>
-            </div><!-- Card HQ -->
+			<c:if test="${not empty listHQ}">
+				<c:forEach var="itemHQ" items="${listHQ}">
+					<div class="cards-hq">
+						<img class="card-img-top" src="img/${itemHQ.capa}"
+							alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">${itemHQ.nome}</h5>
+							<p class="card-text">${itemHQ.descricao}</p>
+							<a href="#" class="btn btn-primary">Ver Mais</a>
+						</div>
+					</div>
+				</c:forEach>
+			</c:if>
         </aside><!-- Painel da direita -->
     </div>
 	</body>
