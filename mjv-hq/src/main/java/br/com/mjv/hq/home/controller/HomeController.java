@@ -21,6 +21,7 @@ public class HomeController {
 	public ModelAndView getdata() {
 
 		List<Hq> listHQ = service.listarHQs();
+		//List<News> listNews = service.listarNews(); // Falta criar as classes / interfaces para receber os parametros.
 		
 		//return back to home.jsp
 		ModelAndView model = new ModelAndView("home");

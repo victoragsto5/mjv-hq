@@ -11,8 +11,6 @@
 		<title>Home / Projeto Mjv</title>
 		
 		<!-- CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
 		<link rel="stylesheet" href="../../css/style.css">
 		
 		<!-- jQuery and JS bundle w/ Popper.js -->
@@ -45,19 +43,23 @@
                 </form><!-- Busca -->
 
                 <div class="post">
-                    <picture class="imagem-post">
-                        <img src="../../img/hq6.jpg" alt="Imagem de post sobre hq do homem-aranha">
-                    </picture><!-- Imagem do post -->
+                    <c:if test="${not empty listNews}">
+                        <c:forEach var="itemNews" items="${listNews}">
+                            <picture class="imagem-post">
+                                <img src="img/${itemNews.imagem_news}" alt="Imagem de post sobre hq do homem-aranha">
+                            </picture><!-- Imagem do post -->
 
-                    <div class="texto-post">
-                        <h2 class="titulo-post">
-                            HQ rara do Homem-Aranha é vendida por 1 milhão de Reais.
-                        </h2>
-
-                        <p class="descricao-post">
-                            Na escrita de textos, é aconselhado o uso de parágrafos curtos ou médios. Não é aconselhado o uso de parágrafos longos, porque podem provocar a dispersão do leitor. Além disso, é essencial que haja coesão entre os diversos parágrafos de um texto, de forma a que as ideias não estejam soltas e descontextualizadas.
-                        </p>
-                    </div><!-- Texto do post -->
+                            <div class="texto-post">
+                                <h2 class="titulo-post">
+                                    ${itemNews.titulo_news}
+                                </h2>
+        
+                                <p class="descricao-post">
+                                    ${itemNews.descricao_news}
+                                </p>
+                            </div><!-- Texto do post -->
+                        </c:forEach>
+                    </c:if>
                 </div><!-- Post -->
             </section>
         </main>
@@ -94,7 +96,9 @@
 						<div class="card-body">
 							<h5 class="card-title">${itemHQ.nome}</h5>
 							<p class="card-text">${itemHQ.descricao}</p>
-							<a href="#" class="btn btn-primary">Ver Mais</a>
+							<p class="estrelas">
+                                &#9733 &#9733 &#9733 &#9733 &#9734
+                            </p>
 						</div>
 					</div>
 				</c:forEach>
