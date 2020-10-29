@@ -20,6 +20,7 @@ public class HqRowMapper implements RowMapper<Hq> {
 		hq.setId(rs.getInt("ID_HQ"));
 		hq.setNome(rs.getString("NOME_HQ"));
 		hq.setCapa(rs.getString("CAPA_HQ"));
+		hq.setDescricao(rs.getString("DESCRICAO_HQ"));
 		
 		return hq;
 	}
