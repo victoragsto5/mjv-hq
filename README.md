@@ -13,4 +13,6 @@ Projeto de pseudo rede social com feed que apresenta notícias sobre hq's e quad
 
 # Screenshots
 <a href="https://ibb.co/BZLrJh7"><img src="https://i.ibb.co/Z8dYrQw/home.png" alt="home" border="0" /></a>
+## /home
 <a href="https://ibb.co/Js1Dr6C"><img src="https://i.ibb.co/nLGxQdR/home2.png" alt="home2" border="0" /></a>
+## /home2
