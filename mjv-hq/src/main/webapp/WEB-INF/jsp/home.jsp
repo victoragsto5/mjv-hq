@@ -29,7 +29,7 @@
 	                
 	                <ul>
 	                    <li><a href="#topo">Home</a></li>
-	                    <li><a href="#">Sair</a></li>
+	                    <li><a href="/mjv-hq/src/main/webapp/WEB-INF/jsp/login.jsp">Sair</a></li>
 	                </ul>
 	            </nav><!-- Menu do topo -->
 	        </header><!-- Cabeçalho -->
