@@ -1,0 +1,101 @@
+/*---------------------------------
+Login
+---------------------------------*/
+body {
+    background: rgb(151, 184, 212);
+}
+.container-principal {
+    width: 100%;
+    max-width: 940px;
+    margin: 4rem auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-height: 45rem;
+    height: 100%;
+    max-width: 40rem;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 3rem;
+    box-shadow: 3px 5px 20px #00000021;
+}
+
+.login-imagem {
+    height: 10rem;
+    width: 10rem;
+    background: #bfd4e6;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.login-imagem > img {
+    max-height: 100%;
+}
+
+.login-titulo {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-paragrafo {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.login-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-formulario input {
+    height: 3rem;
+    width: 100%;
+    border: none;
+    margin: 0 auto;
+    border-bottom: 0.1rem solid #00000087;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.login-formulario input::placeholder {
+    text-align: center;
+}
+
+.botao-padrao {
+    height: 4rem;
+    width: 25rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.login-formulario > button {
+    background: #87abca;
+    color: #ffffff;
+    box-shadow: 1px 2px 6px #00000026;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.login-formulario > button:hover {
+    background: #395f80;
+}
+
+.login-cadastrar {
+    background: transparent;
+    border: .3rem solid #87abca;
+    color: #87abca;
+}
+
+.login-cadastrar:hover {
+    border-color: #395f80;
+    color: #395f80;
+}
