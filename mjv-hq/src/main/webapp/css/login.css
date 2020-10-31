@@ -50,6 +50,9 @@ body {
     margin-bottom: 3rem;
 }
 
+/*---------------------------------
+Formulario
+---------------------------------*/
 .login-formulario {
     display: flex;
     flex-direction: column;
