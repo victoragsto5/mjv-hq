@@ -9,10 +9,14 @@ Projeto de pseudo rede social com feed que apresenta notícias sobre hq's e quad
 - Spring JBDC
 - H2 database
 - JSP
-- Bootstrap 4.5.3
+- HTML5 / CSS3
 
 # Screenshots
-<a href="https://ibb.co/BZLrJh7"><img src="https://i.ibb.co/Z8dYrQw/home.png" alt="home" border="0" /></a>
+
+## /login
+<a href="https://ibb.co/VNMWkV8"><img src="https://i.ibb.co/qnmM2Bw/login.png" alt="login" border="0"></a>
+
 ## /home
-<a href="https://ibb.co/Js1Dr6C"><img src="https://i.ibb.co/nLGxQdR/home2.png" alt="home2" border="0" /></a>
-## /home2
+<a href="https://ibb.co/BZLrJh7"><img src="https://i.ibb.co/Z8dYrQw/home.png" alt="home" border="0" /></a>
+
+
