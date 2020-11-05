@@ -18,10 +18,11 @@ public class MjvHqApplication {
             @Override
             protected void configure(HttpSecurity http) throws Exception {
                 http.authorizeRequests()
-                    .antMatchers("/h2-console/**").hasRole("ADMIN")//allow h2 console access to admins only
+                    .antMatchers("/h2-console/**", "/admin").hasRole("ADMIN")//allow h2 console access to admins only
                     .anyRequest().authenticated()//all other urls can be access by any authenticated role
                     .and()
-                    .formLogin()//enable form login instead of basic login
+                    .formLogin()//enable form login instead of basic login 
+                    .defaultSuccessUrl("/home")
                     .and()
                     .csrf().ignoringAntMatchers("/h2-console/**")//don't apply CSRF protection to /h2-console
                     .and()
@@ -35,7 +36,7 @@ public class MjvHqApplication {
             }
         };
     }
-
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MjvHqApplication.class, args);
 	}
