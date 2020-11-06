@@ -17,7 +17,7 @@ public class LoginController {
 	@Autowired
 	private LoginService service;
 
-	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/cadastrar-usuario", method = RequestMethod.GET)
 	public ModelAndView getdata() {
 
 		List<Login> listLogin = service.listarLogin();
